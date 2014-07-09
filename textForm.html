@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="textForm.css" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="talkBox"></div>
+<div class="formbox">
+  <textarea name="textForm" id="textForm" value="" placeholder="ツイートする" ></textarea>
+</div>
+
+
+<script src="textForm.js"></script>
+
+<script>
+  var form = $('#textForm');
+  var test = new TextForm({
+    $form: form,
+    $box: $('#talkBox')
+  });
+  form.keydown(function(){
+    test.reflect();
+  });
+</script>
+
+</body>
+</html>
