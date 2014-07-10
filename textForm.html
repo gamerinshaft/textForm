@@ -21,7 +21,7 @@
     $form: form,
     $box: $('#talkBox')
   });
-  form.keydown(function(){
+  form.on('keypress keydown keyup', function(){
     test.reflect();
   });
 </script>
